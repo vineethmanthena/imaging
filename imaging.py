@@ -33,7 +33,7 @@ if __name__ == "__main__":
         if img is not None:
             images.append(img)
             
-            processed = preprocess_image_change_detection(img)
+            processed = preprocess_image_change_detection(img,(5,5))
             resized = cv2.resize(processed, (300, 300))
             images_processed.append(resized)
     unique = [images[0]]
